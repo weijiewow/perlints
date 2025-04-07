@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perlin Noise Test Page</title>
+  </head>
+  <body>
+    <div id="app" class="app">
+      <h2 class="col title text-center">Perlin Noise 1D</h2>
+      <div class="col mt-2">
+        <div class="row p-1">
+          <canvas id="noise1" width="600" height="450" class="canvas"></canvas>
+          <p id="noise1-desc">perlin.noise1d : amplitude = ${amplitude}, frequency = ${frequency}</p>
+          <div>
+            <label for="noise1-amplitude">amplitude: </label>
+            <input id="noise1-amplitude" type="range" min="0" max="225" value="100"/>
+          </div>
+          <div>
+            <label for="noise1-frequency">frequency: </label>
+            <input id="noise1-frequency" type="range" min="0.01" max="5" value="0.02" step="0.01"/>
+          </div>
+        </div>
+        <div class="row p-1">
+          <canvas id="fractal-noise1d" width="600" height="450" class="canvas"></canvas>
+          <p id="fractal-noise1d-desc">perlin.fractalNoise1d</p>
+          <script id="fractal-noise1d-option-temp" type="text/template">
+            <div>
+              <label for="fractal-noise1d-{name}">{name}: </label>
+              <input id="fractal-noise1d-{name}" type="range" min="{min}" max="{max}" value="{value}" step="{step}"/>
+              <label id="fractal-noise1d-{name}-value" for="fractal-noise1d-{name}">{value}</label>
+            </div>
+          </script>
+        </div>
+      </div>
+      <h2 class="col title text-center">Perlin Noise 2D</h2>
+      <div class="col mt-2">
+        <div class="row p-1">
+          <canvas id="noise2" width="600" height="450" class="canvas"></canvas>
+          <p id="noise2-desc">perlin.noise2d : frequencyX = ${frequencyX}, frequencyY = ${frequencyY}</p>
+          <div>
+            <label for="noise2-frequencyX">frequencyX: </label>
+            <input id="noise2-frequencyX" type="range" min="0.01" max="10" value="0.05" step="0.01" />
+          </div>
+          <div>
+            <label for="noise2-frequencyY">frequencyY: </label>
+            <input id="noise2-frequencyY" type="range" min="0.01" max="10" value="0.05" step="0.01" />
+          </div>
+        </div>        
+        <div class="row p-1">
+          <canvas id="fractal-noise2d" width="600" height="450" class="canvas"></canvas>
+          <p id="fractal-noise2d-desc">perlin.fractalNoise2d</p>
+          <script id="fractal-noise2d-option-temp" type="text/template">
+            <div>
+              <label for="fractal-noise2d-{name}">{name}: </label>
+              <input id="fractal-noise2d-{name}" type="range" min="{min}" max="{max}" value="{value}" step="{step}"/>
+              <label id="fractal-noise2d-{name}-value" for="fractal-noise2d-{name}">{value}</label>
+            </div>
+          </script>
+        </div>
+      </div>
+      <h2 class="col title text-center">Perlin Noise 3D</h2>
+      <div class="col mt-2">
+        <div class="row p-1">
+          <canvas id="noise3" width="600" height="450" class="canvas"></canvas>
+          <p id="noise3-desc">perlin.noise3d : <br />z = ${z}, <br />frequencyX = ${frequencyX}, <br />frequencyY = ${frequencyY}, <br />frequencyZ = ${frequencyZ}</p>
+          <div>
+            <button id="noise3-play"> Play-Z </button>            
+          </div>
+          <div class="mt-2">
+            <label for="noise3-Z">Z: </label>
+            <input id="noise3-Z" type="range" min="0" max="450" value="0" step="1" />
+          </div>
+          <div>
+            <label for="noise3-frequencyX">frequencyX: </label>
+            <input id="noise3-frequencyX" type="range" min="0.01" max="10" value="0.05" step="0.01" />
+          </div>
+          <div>
+            <label for="noise3-frequencyY">frequencyY: </label>
+            <input id="noise3-frequencyY" type="range" min="0.01" max="10" value="0.05" step="0.01" />
+          </div>
+          <div>
+            <label for="noise3-frequencyZ">frequencyZ: </label>
+            <input id="noise3-frequencyZ" type="range" min="0.01" max="10" value="0.05" step="0.01" />
+          </div>
+        </div>        
+        <div class="row p-1">
+          <canvas id="fractal-noise3d" width="600" height="450" class="canvas"></canvas>
+          <p id="fractal-noise3d-desc">perlin.fractalNoise3d</p>
+          <div>
+            <button id="fractal-noise3-play"> Play-Z </button>            
+          </div>
+          <div class="mt-2">
+            <label for="fractal-noise3-Z">Z: </label>
+            <input id="fractal-noise3-Z" type="range" min="0" max="450" value="0" step="1" />
+              <label id="fractal-noise3d-Z-value" for="fractal-noise3d-Z">{value}</label>
+          </div>
+          <script id="fractal-noise3d-option-temp" type="text/template">
+            <div>
+              <label for="fractal-noise3d-{name}">{name}: </label>
+              <input id="fractal-noise3d-{name}" type="range" min="{min}" max="{max}" value="{value}" step="{step}"/>
+              <label id="fractal-noise3d-{name}-value" for="fractal-noise3d-{name}">{value}</label>
+            </div>
+          </script>
+        </div>
+      </div>
+      <h2 class="col title text-center">Perlin Noise 4D</h2>
+      <div class="col mt-2">
+        <div class="row p-1">
+          <canvas id="noise4" width="600" height="450" class="canvas"></canvas>
+          <p id="noise4-desc">perlin.noise4d : 
+            <br />z = ${z}, 
+            <br />w = ${w}, 
+            <br />frequencyX = ${frequencyX}, 
+            <br />frequencyY = ${frequencyY}, 
+            <br />frequencyZ = ${frequencyZ},
+            <br />frequencyW = ${frequencyW},
+          </p>
+          <div>
+            <button id="noise4-playZ"> Play-Z </button>            
+            <button id="noise4-playW"> Play-W </button>            
+          </div>
+          <div class="mt-2">
+            <label for="noise4-Z">Z: </label>
+            <input id="noise4-Z" type="range" min="0" max="450" value="0" step="1" />
+          </div>
+          <div>
+            <label for="noise4-W">W: </label>
+            <input id="noise4-W" type="range" min="0" max="450" value="0" step="1" />
+          </div>
+          <div>
+            <label for="noise4-frequencyX">frequencyX: </label>
+            <input id="noise4-frequencyX" type="range" min="0.01" max="10" value="0.05" step="0.01" />
+          </div>
+          <div>
+            <label for="noise4-frequencyY">frequencyY: </label>
+            <input id="noise4-frequencyY" type="range" min="0.01" max="10" value="0.05" step="0.01" />
+          </div>
+          <div>
+            <label for="noise4-frequencyZ">frequencyZ: </label>
+            <input id="noise4-frequencyZ" type="range" min="0.01" max="10" value="0.05" step="0.01" />
+          </div>
+          <div>
+            <label for="noise4-frequencyW">frequencyW: </label>
+            <input id="noise4-frequencyW" type="range" min="0.01" max="10" value="0.05" step="0.01" />
+          </div>
+        </div>        
+        <div class="row p-1">
+          <canvas id="fractal-noise4d" width="600" height="450" class="canvas"></canvas>
+          <p id="fractal-noise4d-desc">perlin.fractalNoise4d</p>
+          <div>
+            <button id="fractal-noise4-playZ"> Play-Z </button>
+            <button id="fractal-noise4-playW"> Play-W </button>
+          </div>
+          <div class="mt-2">
+            <label for="fractal-noise4-Z">Z: </label>
+            <input id="fractal-noise4-Z" type="range" min="0" max="450" value="0" step="1" />
+            <label id="fractal-noise4d-Z-value" for="fractal-noise4-Z">{value}</label>
+          </div>
+          <div>
+            <label for="fractal-noise4-W">W: </label>
+            <input id="fractal-noise4-W" type="range" min="0" max="450" value="0" step="1" />
+            <label id="fractal-noise4d-W-value" for="fractal-noise4-W">{value}</label>
+          </div>
+          <script id="fractal-noise4d-option-temp" type="text/template">
+            <div>
+              <label for="fractal-noise4d-{name}">{name}: </label>
+              <input id="fractal-noise4d-{name}" type="range" min="{min}" max="{max}" value="{value}" step="{step}"/>
+              <label id="fractal-noise4d-{name}-value" for="fractal-noise4d-{name}">{value}</label>
+            </div>
+          </script>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/visual_tests/main.ts"></script>
+  </body>
+</html>
