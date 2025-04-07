@@ -1,6 +1,6 @@
 # Classical Perlin Noise
 
-A library for 1D, 2D, 3D, and 4D classical Perlin noise in TypeScript.
+A library for 1D, 2D, 3D, and 4D classical Perlin noise in TypeScript. See the visual test cases [here](https://weijiewow.github.io/perlints/).
 
 ## Generating Noise
 

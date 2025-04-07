@@ -6,6 +6,13 @@
   "description": "A small, fast, classical Perlin noise generator that uses CPU. Without any dependencies.",
   "author": "Weijie <weijiewow@163.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/weijiewow/perlints.git"
+  },
+  "bugs": {
+    "url": "https://github.com/weijiewow/perlints/issues"
+  },
   "keywords": [
     "noise",
     "randomness",
@@ -28,7 +35,7 @@
     "build:lib": "tsc && vite build",
     "build:pages": "tsc && vite build --config vite.pages.config.js",
     "build:doc": "api-extractor run & api-documenter markdown -i ./temp -o ./doc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"Error: no test specified. See the visual test cases at https://weijiewow.github.io/perlints/\" && exit 1",
     "preview": "vite preview",
     "lint": "eslint",
     "lint:fix": "eslint --fix"
