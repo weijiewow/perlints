@@ -6,5 +6,6 @@ export default defineConfig({
   mode: 'production',
   build: {
     outDir: 'pages',
+    assetsDir: 'perlints/assets',
   },
 });
