@@ -1,7 +1,7 @@
 {
   "name": "perlin.ts",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "A small, fast, classical Perlin noise generator that uses CPU. Without any dependencies.",
   "author": "Weijie <weijiewow@163.com>",
@@ -40,9 +40,7 @@
     "lint": "eslint",
     "lint:fix": "eslint --fix"
   },
-  "dependencies": {
-
-  },
+  "dependencies": {},
   "devDependencies": {
     "@antfu/eslint-config": "^4.10.1",
     "@eslint/js": "^9.22.0",
