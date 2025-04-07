@@ -1,0 +1,16 @@
+{
+  "mainEntryPointFilePath": "<projectFolder>/dist/perlin.d.ts",
+  "apiReport": {
+    "enabled": false,
+    "reportFolder": "<projectFolder>/apireports"
+  },
+  "docModel": {
+    "enabled": true,
+    "apiJsonFilePath": "<projectFolder>/temp/<unscopedPackageName>.api.json"
+  },
+  "dtsRollup": {
+    "enabled": true,
+    "untrimmedFilePath": "<projectFolder>/temp/perlin.d.ts",
+    "publicTrimmedFilePath": "<projectFolder>/dist/perlin.d.ts"
+  }
+}
