@@ -28,6 +28,8 @@ perlin.fractalNoise3d(x, y, z, fractalOptions3D);
 perlin.fractalNoise4d(x, y, z, w, fractalOptions4D);
 ```
 
+Here you can view the [documentation](https://github.com/weijiewow/perlints/blob/main/doc/perlin.ts.md), which contains detailed descriptions of all the thins in the library.
+
 ## Generating Fractal Noise
 
 > By adding different iterations of noise (octaves), where we successively increment the frequencies in regular steps (lacunarity) and decrease the amplitude (gain) of the noise we can obtain a finer granularity in the noise and get more fine detail. This technique is called "fractal Brownian Motion" (fBM), or simply "fractal noise". -- the book of shaders
@@ -117,4 +119,9 @@ npm install perlin.ts
 
 Node.js, Require.js (AMD) and Common.js supported: `const Perlin = require('perlin.ts');`
 
-Otherwise a `perlin.ts` global is created.
+Otherwise a `perlin` global is created.
+
+## Todo
+
+- Add an optional matrix as a property to the fractal options, which describes how to linearly transform the input vector per layer.
+- Add an optional parameter to the `noiseXd` and the `fractalNoiseXd` methods, which use to receives the analytical gradient of the noise function.
